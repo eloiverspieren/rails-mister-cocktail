@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Cocktail.destroy.all
+Cocktail.destroy_all
 
 cocktails_attributes = [
   {
@@ -18,24 +18,36 @@ cocktails_attributes = [
     image_url: "https://jeremybutterfield.files.wordpress.com/2015/11/bloody-mary_basic.jpg"
     },
   {
-      name: "Jagerbomb",
-      image_url: "http://www.scoutnetworkblog.com/wp-content/uploads/2014/04/J%C3%A4ger_Bomb_New-copy.jpg"
-    }
+    name: "Jagerbomb",
+    image_url: "http://www.scoutnetworkblog.com/wp-content/uploads/2014/04/J%C3%A4ger_Bomb_New-copy.jpg"
+    },
   {
-      name: "Blue Lagoon",
-      image_url: "https://hd.unsplash.com/photo-1461823385004-d7660947a7c0"
-    }
+    name: "Blue Lagoon",
+    image_url: "https://hd.unsplash.com/photo-1461823385004-d7660947a7c0"
+    },
   {
-      name: "Vodka Framboise",
-      image_url: "https://hd.unsplash.com/photo-1438522014717-d7ce32b9bab9"
-    }
-  {
-      name: "Jagerbomb",
-      image_url: "http://www.scoutnetworkblog.com/wp-content/uploads/2014/04/J%C3%A4ger_Bomb_New-copy.jpg"
+    name: "Vodka Framboise",
+    image_url: "https://hd.unsplash.com/photo-1438522014717-d7ce32b9bab9"
     }
 ]
 
 
-cocktails_attributes.each { |params| Cocktail.create!(params)}
+cocktails_attributes.each { |params| Cocktail.create!(params) }
 
+Ingredient.destroy_all
+
+ingredients_attributes = [
+{
+  name: "lemon"
+  },
+{
+  name: "ice"
+  },
+{
+  name: "mint leaves"
+}
+  ]
+
+
+ingredients_attributes.each { |params| Ingredient.create!(params) }
 
