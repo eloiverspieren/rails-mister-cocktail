@@ -13,9 +13,6 @@
           <p>Doses</p><br><br>
           <% @cocktail.doses.each do |d| %>
             <h2><%= d.description %></h2>
-            <% @dose.ingredients.each do |i| %>
-            <%= i.name %>
-            <% end %>
           <% end %>
         </div>
 
