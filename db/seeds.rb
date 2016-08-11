@@ -6,6 +6,36 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Cocktail.destroy.all
 
-Dose.create(description: "recette", ingredient_id: 1, cocktail_id: 1)
+cocktails_attributes = [
+  {
+    name: "Mojito",
+    image_url: "https://hd.unsplash.com/photo-1455621481073-d5bc1c40e3cb"
+    },
+  {
+    name: "Bloody Mary",
+    image_url: "https://jeremybutterfield.files.wordpress.com/2015/11/bloody-mary_basic.jpg"
+    },
+  {
+      name: "Jagerbomb",
+      image_url: "http://www.scoutnetworkblog.com/wp-content/uploads/2014/04/J%C3%A4ger_Bomb_New-copy.jpg"
+    }
+  {
+      name: "Blue Lagoon",
+      image_url: "https://hd.unsplash.com/photo-1461823385004-d7660947a7c0"
+    }
+  {
+      name: "Vodka Framboise",
+      image_url: "https://hd.unsplash.com/photo-1438522014717-d7ce32b9bab9"
+    }
+  {
+      name: "Jagerbomb",
+      image_url: "http://www.scoutnetworkblog.com/wp-content/uploads/2014/04/J%C3%A4ger_Bomb_New-copy.jpg"
+    }
+]
+
+
+cocktails_attributes.each { |params| Cocktail.create!(params)}
+
 
